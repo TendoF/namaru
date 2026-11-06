@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Namaru Enterprises | Home Bed & Linen, Harare</title>
+<meta name="description" content="Bed runners, bathrobes, diffusers and beauty essentials in Harare. Comfort for every home.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b211b;--cream:#f7f1e9;--sand:#e9dccb;--tan:#d9b995;--clay:#a9805c;--teal:#2f5d62;--w:min(1180px,92vw)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:var(--w);margin:auto}
+section{padding:clamp(56px,9vw,110px) 0}
+h1,h2,h3{line-height:1.08;letter-spacing:-.02em;font-weight:600}
+h2{font-size:clamp(1.7rem,4.6vw,3rem);margin-bottom:14px}
+h3{font-size:clamp(1.1rem,2.4vw,1.35rem)}
+p.lead{max-width:58ch;color:#5d5047;font-size:clamp(.98rem,1.8vw,1.1rem)}
+.btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:600;font-size:.95rem;background:var(--tan);color:var(--ink);border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:#cba67d}
+.btn.w{background:#fff}.btn.w:hover{background:var(--sand)}
+.btn.d{background:var(--ink);color:#fff}.btn.d:hover{background:#44352c}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;padding:0;color:#fff;display:flex;flex-direction:column;
+background:linear-gradient(135deg,#6b5546,#2f5d62) center/cover}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:url(bg.avif) center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;
+background:linear-gradient(90deg,rgba(120,92,72,.62),rgba(120,92,72,.28) 55%,rgba(40,30,24,.2)),
+repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 46px,rgba(0,0,0,.05) 46px 92px);
+-webkit-mask-image:none}
+nav{position:relative;z-index:5;margin:18px auto 0;width:min(1240px,94vw);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 22px;border-radius:14px;background:rgba(255,255,255,.2);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.28)}
+.logo{font-weight:700;font-size:1.15rem;letter-spacing:-.01em;white-space:nowrap}
+.links{display:flex;gap:30px;font-size:.92rem;font-weight:500}
+.links a{opacity:.92}.links a:hover{opacity:1}
+nav .btn{padding:11px 18px;font-size:.88rem}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1}
+.hero-body{position:relative;z-index:3;flex:1;width:min(1240px,94vw);margin:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding:60px 0 clamp(32px,6vw,64px)}
+.hero h1{font-size:clamp(2.2rem,6.6vw,5.4rem);max-width:9.5em;font-weight:600}
+.hero p{margin:20px 0 28px;max-width:42ch;font-size:clamp(.95rem,1.6vw,1.08rem);opacity:.92}
+.stats{display:flex;gap:clamp(24px,4vw,56px);padding-bottom:6px}
+.stats div{border-left:1px solid rgba(255,255,255,.55);padding-left:18px}
+.stats b{display:block;font-size:clamp(1.8rem,3.6vw,3rem);font-weight:500;line-height:1}
+.stats span{font-size:.85rem;opacity:.9}
+
+/* STRIP */
+.strip{background:var(--ink);color:var(--sand);padding:20px 0}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:.95rem;font-weight:500}
+
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,80px);align-items:center}
+.split.rev .pic{order:2}
+.pic img{width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:18px}
+.pic.sq img{aspect-ratio:1/1}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 28px;align-items:center}
+.price{font-size:1.5rem;font-weight:600}
+.tag{background:var(--sand);padding:6px 14px;border-radius:99px;font-size:.85rem;font-weight:500}
+ul.ticks{list-style:none;margin:20px 0 0;display:grid;gap:10px}
+ul.ticks li{padding-left:28px;position:relative;color:#4a3d34}
+ul.ticks li::before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+
+/* ABOUT */
+#about{background:#fff}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.about-stats div{border-top:2px solid var(--tan);padding-top:12px}
+.about-stats b{font-size:1.8rem;display:block}
+
+/* COLLECTION */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.card div{padding:20px 22px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card p{color:#6a5b50;font-size:.93rem;flex:1}
+.card .row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding:0;flex-direction:row}
+.card .row b{font-size:1.05rem}
+.card .row a{font-weight:600;color:var(--teal);font-size:.9rem}
+.card.k{background:var(--teal);color:#fff;justify-content:center}
+.card.k div{justify-content:center;gap:10px}
+.card.k p{color:#d5e6e7;flex:none}
+.card.k b.big{font-size:3.2rem;font-weight:600}
+.card.k .row a{color:#fff}
+
+/* KIDS */
+#kids{background:linear-gradient(120deg,#d8ecf8,#f1f7fb)}
+.kids-box{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.badge{width:clamp(150px,26vw,230px);aspect-ratio:1;border-radius:50%;background:#1d4fa3;color:#fff;display:grid;place-content:center;text-align:center;box-shadow:0 0 0 8px #f7c948;margin:auto}
+.badge small{font-size:.9rem;letter-spacing:.04em}
+.badge b{font-size:clamp(2.8rem,8vw,4.6rem);line-height:1}
+.incl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
+.incl div{background:#fff;border-radius:12px;padding:14px;font-size:.92rem}
+.incl b{display:block;font-size:1.4rem}
+
+/* WHY */
+#why{background:var(--ink);color:#fff}
+#why p.lead{color:#cdbfb2}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:44px}
+.why div{border-top:1px solid #5a4a3f;padding-top:18px}
+.why p{color:#bfb0a3;font-size:.93rem;margin-top:8px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px;counter-reset:s}
+.steps div{background:#fff;border-radius:16px;padding:26px 22px;counter-increment:s}
+.steps div::before{content:counter(s);display:grid;place-content:center;width:38px;height:38px;border-radius:50%;background:var(--tan);font-weight:700;margin-bottom:16px}
+.steps p{color:#6a5b50;font-size:.93rem;margin-top:6px}
+
+/* FAQ */
+#faq{background:#fff}
+.faq{max-width:820px;margin-top:30px}
+details{border-bottom:1px solid var(--sand);padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:#5d5047}
+
+/* CONTACT */
+#contact{background:var(--teal);color:#fff}
+.cgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,6vw,70px);align-items:center}
+#contact p.lead{color:#d5e6e7}
+.info{display:grid;gap:18px}
+.info div{background:rgba(255,255,255,.1);border-radius:14px;padding:18px 20px}
+.info small{opacity:.75;display:block}
+.info b{font-size:1.1rem;font-weight:600;word-break:break-word}
+footer{background:#1d1612;color:#b9aa9d;padding:26px 0;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.why,.steps{grid-template-columns:repeat(2,1fr)}
+.hero-body{flex-direction:column;align-items:flex-start;justify-content:flex-end}
+}
+@media(max-width:760px){
+.burger{display:block}
+nav .btn{display:none}
+.links{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;gap:0;background:rgba(43,33,27,.92);backdrop-filter:blur(14px);border-radius:14px;padding:8px 22px}
+.links.open{display:flex}
+.links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.links a:last-child{border:0}
+.split,.kids-box,.cgrid{grid-template-columns:1fr}
+.split.rev .pic{order:0}
+.pic img{aspect-ratio:4/3.4}
+.stats{width:100%;justify-content:space-between;gap:12px}
+.stats div{padding-left:12px}
+.hero p{margin:14px 0 22px}
+.btn{padding:13px 22px}
+.strip .wrap{justify-content:flex-start;font-size:.88rem}
+.incl{grid-template-columns:1fr 1fr 1fr;gap:8px}.incl div{padding:12px 10px;font-size:.8rem}.incl b{font-size:1.15rem}
+}
+@media(max-width:520px){
+.grid{grid-template-columns:1fr}
+.why,.steps{grid-template-columns:1fr}
+.about-stats{gap:10px}.about-stats b{font-size:1.4rem}.about-stats span{font-size:.82rem}
+.stats b{font-size:1.5rem}.stats span{font-size:.75rem}
+nav{padding:8px 10px 8px 16px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- 1. HERO -->
+<header class="hero" id="home">
+  <nav>
+    <a class="logo" href="#home">Namaru</a>
+    <div class="links" id="links">
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#kids">Kids</a>
+      <a href="#order">How to order</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/263779550231" target="_blank" rel="noopener">Order on WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  </nav>
+  <div class="hero-body">
+    <div>
+      <h1>Transform Your Space, Transform Your Comfort</h1>
+      <p>Bed runners, bathrobes, diffusers and beauty essentials, chosen to make every Harare home feel like a hotel suite.</p>
+      <a class="btn w" href="#collection">Shop the Collection</a>
+    </div>
+    <div class="stats">
+      <div><b>5+</b><span>Product ranges</span></div>
+      <div><b>$50</b><span>Kids set from</span></div>
+      <div><b>7 days</b><span>Open weekly</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- 2. PROMISE STRIP -->
+<div class="strip"><div class="wrap">
+  <span>Home bed &amp; linen</span><span>Comfort for every home</span><span>Based at The Lookout Hubb, Greendale</span><span>Order via WhatsApp or Instagram</span>
+</div></div>
+
+<!-- 3. ABOUT -->
+<section id="about"><div class="wrap split">
+  <div class="pic"><img src="bed_set.webp" alt="Pink quilted comforter with floral bed runner" loading="lazy"></div>
+  <div>
+    <h2>Your home, your glow, your comfort.</h2>
+    <p class="lead">Namaru Enterprises specialises in high-quality bedding and pillows designed to give you the comfort you deserve. From a bed runner that finishes a room to a robe that makes bath time feel special, everything we stock is chosen to lift the everyday.</p>
+    <div class="about-stats">
+      <div><b>09:00</b><span>Opens daily</span></div>
+      <div><b>18:00</b><span>Closes daily</span></div>
+      <div><b>Harare</b><span>Greendale</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 4. COLLECTION -->
+<section id="collection"><div class="wrap">
+  <div class="head"><div><h2>The Namaru collection</h2><p class="lead">Five ranges for the bedroom, bathroom and beauty routine. Message us for today's price on any item.</p></div></div>
+  <div class="grid">
+    <article class="card"><img src="stylishbedrunners.jpg" alt="Sage green textured bed runner with cushions" loading="lazy"><div><h3>Stylish Bed Runners</h3><p>Textured runners with matching cushions to give a bed that finished, elegant look.</p><div class="row"><b>Inbox for price</b><a href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20I%27d%20like%20a%20bed%20runner" target="_blank" rel="noopener">Order</a></div></div></article>
+    <article class="card"><img src="bed_set.webp" alt="Pink comforter set" loading="lazy"><div><h3>Comforter &amp; Pillow Sets</h3><p>Soft quilted comforters with printed accents and matching pillow shams.</p><div class="row"><b>Inbox for price</b><a href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20I%27d%20like%20a%20comforter%20set" target="_blank" rel="noopener">Order</a></div></div></article>
+    <article class="card"><img src="bathropes.jpg" alt="White bathrobes on hooks in a marble bathroom" loading="lazy"><div><h3>Luxurious Bathrobes</h3><p>Plush white robes with that spa-after-a-long-day feel.</p><div class="row"><b>Inbox for price</b><a href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20I%27d%20like%20a%20bathrobe" target="_blank" rel="noopener">Order</a></div></div></article>
+    <article class="card"><img src="refreshing_difusers.jpeg" alt="Reed diffusers on a wooden table" loading="lazy"><div><h3>Refreshing Diffusers</h3><p>Reed diffusers that keep a room smelling fresh, day and night.</p><div class="row"><b>Inbox for price</b><a href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20I%27d%20like%20a%20diffuser" target="_blank" rel="noopener">Order</a></div></div></article>
+    <article class="card"><img src="whiteningpowder.jpg" alt="Teeth whitening powder jar and box" loading="lazy"><div><h3>Whitening Powder</h3><p>A simple addition to your beauty routine for a brighter smile.</p><div class="row"><b>Inbox for price</b><a href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20I%27d%20like%20whitening%20powder" target="_blank" rel="noopener">Order</a></div></div></article>
+    <article class="card k"><div><p>Kids' Bed Runner Set</p><b class="big">$50</b><h3>Runner, 2 cushions and 2 covers</h3><div class="row"><span>Cartoon designs</span><a href="#kids">See the set</a></div></div></article>
+  </div>
+</div></section>
+
+<!-- 5. BED RUNNERS -->
+<section style="background:#fff"><div class="wrap split rev">
+  <div class="pic"><img src="stylishbedrunners.jpg" alt="Bed dressed with a textured runner and two cushions" loading="lazy"></div>
+  <div>
+    <h2>The finishing touch your bed has been missing</h2>
+    <p class="lead">A bed runner turns plain white linen into a styled room in under a minute. Pair it with matching cushions and the whole space looks considered.</p>
+    <ul class="ticks"><li>Textured weave with a tassel edge</li><li>Matching cushions available</li><li>Works with any white or neutral bedding</li></ul>
+    <div class="meta"><a class="btn d" href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20what%20bed%20runner%20colours%20do%20you%20have%3F" target="_blank" rel="noopener">Ask about colours</a></div>
+  </div>
+</div></section>
+
+<!-- 6. KIDS -->
+<section id="kids"><div class="wrap kids-box">
+  <div>
+    <h2>Adorable kids' bed runner sets</h2>
+    <p class="lead">Bright, playful cartoon designs that make a child's bedroom their favourite place. Everything in the box is ready to style.</p>
+    <div class="incl"><div><b>1</b>Bed runner</div><div><b>2</b>Cushions 60×60 cm</div><div><b>2</b>Cushion covers</div></div>
+    <a class="btn d" href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20I%27d%20like%20the%20kids%20bed%20runner%20set%20for%20%2450" target="_blank" rel="noopener">Order the $50 set</a>
+  </div>
+  <div class="badge"><small>ONLY</small><b>$50</b></div>
+</div></section>
+
+<!-- 7. BATHROBES -->
+<section><div class="wrap split">
+  <div class="pic"><img src="bathropes.jpg" alt="Two white bathrobes hanging in a marble bathroom" loading="lazy"></div>
+  <div>
+    <h2>Make bath time feel like a hotel stay</h2>
+    <p class="lead">Thick, soft robes that wrap you up the moment you step out. A gift people actually keep using, for couples, new homes and birthdays.</p>
+    <ul class="ticks"><li>Soft, absorbent finish</li><li>Easy tie waist and roomy fit</li><li>Great as a set of two</li></ul>
+    <div class="meta"><a class="btn d" href="https://wa.me/263779550231?text=Hi%20Namaru%2C%20I%27d%20like%20to%20order%20bathrobes" target="_blank" rel="noopener">Order bathrobes</a></div>
+  </div>
+</div></section>
+
+<!-- 8. SCENT & BEAUTY -->
+<section style="background:#fff"><div class="wrap split rev">
+  <div class="pic sq"><img src="refreshing_difusers.jpeg" alt="Assorted reed diffusers" loading="lazy"></div>
+  <div>
+    <h2>A fresher home, a brighter smile</h2>
+    <p class="lead">Our reed diffusers keep rooms smelling clean without lighting a thing, and our whitening powder slots into your routine in minutes.</p>
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:14px;margin-top:24px">
+      <div class="card" style="background:var(--cream)"><img src="refreshing_difusers.jpeg" alt="Diffuser" loading="lazy" style="aspect-ratio:16/10"><div><h3>Diffusers</h3></div></div>
+      <div class="card" style="background:var(--cream)"><img src="whiteningpowder.jpg" alt="Whitening powder" loading="lazy" style="aspect-ratio:16/10;object-fit:contain;background:#fff"><div><h3>Whitening Powder</h3></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 9. WHY -->
+<section id="why"><div class="wrap">
+  <h2>Why shop with Namaru</h2>
+  <p class="lead">Small, local and easy to deal with.</p>
+  <div class="why">
+    <div><h3>Quality you can feel</h3><p>Bedding and linen picked for softness and durability.</p></div>
+    <div><h3>Fair, clear pricing</h3><p>Message us and get a straight answer on price.</p></div>
+    <div><h3>Local to Harare</h3><p>Find us at The Lookout Hubb, 50 Greendale Avenue.</p></div>
+    <div><h3>Easy ordering</h3><p>WhatsApp or Instagram. No account, no checkout forms.</p></div>
+  </div>
+</div></section>
+
+<!-- 10. HOW TO ORDER -->
+<section id="order"><div class="wrap">
+  <h2>How to order</h2>
+  <p class="lead">From message to doorstep in four simple steps.</p>
+  <div class="steps">
+    <div><h3>Pick your items</h3><p>Browse the collection above.</p></div>
+    <div><h3>Message us</h3><p>WhatsApp 077 955 0231 or DM on Instagram.</p></div>
+    <div><h3>Confirm price</h3><p>We confirm availability and the total.</p></div>
+    <div><h3>Collect or deliver</h3><p>Pick up at the hub or arrange delivery.</p></div>
+  </div>
+</div></section>
+
+<!-- 11. FAQ -->
+<section id="faq"><div class="wrap">
+  <h2>Questions, answered</h2>
+  <div class="faq">
+    <details><summary>How do I find out prices?</summary><p>Send us a message on WhatsApp or Instagram with the item you want and we'll reply with the price. The kids' bed runner set is $50.</p></details>
+    <details><summary>Where are you based?</summary><p>50 Greendale Avenue, The Lookout Hubb, Harare.</p></details>
+    <details><summary>When are you open?</summary><p>Every day, 09:00 to 18:00.</p></details>
+    <details><summary>Is stock limited?</summary><p>Yes. Popular designs go fast, so message early to secure yours.</p></details>
+  </div>
+</div></section>
+
+<!-- 12. CONTACT -->
+<section id="contact"><div class="wrap cgrid">
+  <div>
+    <h2>Ready to refresh your home?</h2>
+    <p class="lead">Message us today. Hurry while stocks last.</p>
+    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn w" href="https://wa.me/263779550231" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn" href="https://instagram.com/namaru54" target="_blank" rel="noopener">Instagram @namaru54</a>
+    </div>
+  </div>
+  <div class="info">
+    <div><small>Phone / WhatsApp</small><b>+263 77 955 0231</b></div>
+    <div><small>Visit us</small><b>50 Greendale Avenue, The Lookout Hubb, Harare</b></div>
+    <div><small>Hours</small><b>Daily, 09:00 to 18:00</b></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; 2026 Namaru Enterprises</span><span>Website by Tendo Websites</span></div></footer>
+
+<script>
+var b=document.getElementById('burger'),l=document.getElementById('links');
+b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+l.addEventListener('click',function(){l.classList.remove('open');b.setAttribute('aria-expanded',false)});
+</script>
+</body>
+</html>
